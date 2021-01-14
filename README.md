@@ -1,1 +1,1 @@
-## whach a mole game
+## whak a mole game
