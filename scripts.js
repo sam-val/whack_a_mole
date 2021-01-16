@@ -2,11 +2,11 @@
 var grid = document.querySelector(".grid")
 
 const score = document.querySelector(".prompt span")
-const canvas = document.querySelector(".canvas")
+var canvas = document.querySelector(".canvas")
 const width = 3; 
 const axe_img = document.querySelector("#axe")
 var axe_down_img = document.querySelector("#axe_down")
-const interval = 1500;
+const interval = 1000;
 const delayed_interval = 3000;
 
 
@@ -27,15 +27,14 @@ function create_board(width) {
 }
 
 function draw_axe(event, img) {
-    let desired_w = 150;
-    let desired_h = 150;
+    let desired_w = 120;
+    let desired_h = 120;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     let x = event.clientX - canvas.offsetLeft - desired_h/2 
     let y = event.clientY - canvas.offsetTop - desired_w/2
 
     ctx.drawImage(img, x, y, desired_w, desired_h)
     
-    console.log("axe witdh", img.width)
 }
 
 function axe_hit(event) {
@@ -102,7 +101,7 @@ function trackMouse(event) {
 
 function adjust_canvas_size() {
     let grid_rect = grid.getBoundingClientRect()
-    console.log(grid_rect.top, grid_rect.left)
+    console.log(grid_rect.left, grid_rect.top)
     canvas.width = grid_rect.width;
     canvas.height = grid_rect.height;
     canvas.style.left = grid_rect.left + "px"
@@ -117,5 +116,5 @@ var current_pos = random_pos();
 var loop = setInterval(mole_out, interval)
 adjust_canvas_size()
 
-const ctx = canvas.getContext("2d")
+var ctx = canvas.getContext("2d")
 window.addEventListener("resize",  adjust_canvas_size)
