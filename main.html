@@ -8,10 +8,15 @@
     <script defer src="scripts.js"></script>
 </head>
 <body>
+    <canvas class="canvas" ></canvas>
+    <div style="display: none">
+        <img id="axe_down" src="imgs/axe_down_small.png">
+        <img id="axe" src="imgs/axe_small.png" width="50%" height="auto">
+    </div>
     <div class="wrap">
         <div class="main">
-            <div class="prompt">promt</div>
-            <div class="grid">
+            <div class="prompt">Hits: <span>0</span></div>
+            <div class="grid" onmousemove="trackMouse(event)" ">
             </div>
     </div> 
 
