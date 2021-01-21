@@ -1,6 +1,6 @@
 ## whak a mole game
 
-Your goal is to whak down the head of the orange square-headed mole using an MIGHTY AXE!
+You're gonna whak some mole.
 
 ## GIF:
 
