@@ -1,4 +1,4 @@
-## whak a mole game
+## whak a mole 
 
 You're gonna whak some mole.
 
